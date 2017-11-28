@@ -4,13 +4,22 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.automationframework.UIUtil;
+ 
 
 public class TestSteps {
 
 	@Given("^User is on Home Page$")
 	public void User_is_on_Home_Page() throws Throwable {
-	    // Express the Regexp above with the code you wish you had
+	WebDriver driver = UIUtil.createDriver();
+
+	 driver.close();
 	    throw new PendingException();
+
 	}
 
 	@When("^User Navigate to LogIn Page$")
