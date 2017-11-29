@@ -32,7 +32,7 @@ public class UIUtil {
 	   String driverpath= System.getProperty("user.dir")+"\\lib\\chromedriver\\windows"+"\\chromedriver.exe";
 	   System.setProperty("webdriver.chrome.driver", driverpath);
 	   WebDriver driver = new ChromeDriver();
-		driver.get("www.google.com");
+		//driver.get("www.google.com");
 		Thread.sleep(5000);
       // driver.get("http://localhost:8080/app/ncui/index.html#/ingredients");
       return driver;

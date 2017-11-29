@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
  
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
  
 public class SeleniumTest {
@@ -11,10 +12,12 @@ public class SeleniumTest {
 	public static void main(String[] args) {
 		// Create a new instance of the Firefox driver
  
-        driver = new FirefoxDriver();
+      //  driver = new FirefoxDriver();
  
         //Put a Implicit wait, this means that any search for elements on the page could take the time the implicit wait is set for before throwing exception
- 
+	   String driverpath= System.getProperty("user.dir")+"\\lib\\chromedriver\\windows"+"\\chromedriver.exe";
+      System.setProperty("webdriver.chrome.driver", driverpath);
+      WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
  
         //Launch the Online Store Website
